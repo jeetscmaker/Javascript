@@ -9,3 +9,12 @@ UTF-8 encoding will store "hello" like this (binary): 01101000 01100101 01101100
 sum = function (a, b) {
     alert("sum called!" + (a + b));
 }
+
+average = function(){
+    var arr = [5, 6, 76, 12, 8];
+    let s = 0;
+    arr.forEach(element => {
+        s = s + element;
+    });
+    return s/arr.length;
+}
