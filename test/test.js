@@ -48,3 +48,8 @@ bitwiseOps = function () {
 
     return x + ", " + y + ", " + z + ", " + w + ", " + u + ", " + v;
 }
+
+//Converting Decimal to Binary
+function dec2bin(dec){
+    return (dec >>> 0).toString(2);
+  }
