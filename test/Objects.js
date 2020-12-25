@@ -28,3 +28,13 @@ console.log(typeof {name:'John', age:34} );
 console.log(typeof [1,2,3,4]);
 console.log(typeof null);
 console.log(typeof function myFunc(){} );
+
+/*
+Do Not Declare Strings, Numbers, and Booleans as Objects!
+When a JavaScript variable is declared with the keyword "new", the variable is created as an object:
+
+var x = new String();        // Declares x as a String object
+var y = new Number();        // Declares y as a Number object
+var z = new Boolean();       // Declares z as a Boolean object
+Avoid String, Number, and Boolean objects. They complicate your code and slow down execution speed.
+*/
