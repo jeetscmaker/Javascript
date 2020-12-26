@@ -51,3 +51,13 @@ console.log("The sliced part is:" + str.slice(7, 13));
 //If a parameter is negative, the position is counted from the end of the string.
 //This example slices out a portion of a string from position -12 to position -6:
 console.log("The sliced part is:" + str.slice(-12, -6));
+//substring() is similar to slice().
+//The difference is that substring() cannot accept negative indexes.
+//If you omit the second parameter, substring() will slice out the rest of the string.
+//substr() is similar to slice().
+//The difference is that the second parameter specifies the length of the extracted part.
+//If you omit the second parameter, substr() will slice out the rest of the string.
+//If the first parameter is negative, the position counts from the end of the string.
+console.log(str.substring(0,5));
+console.log(str.substr(0,6));
+console.log(str.substr(-7));
