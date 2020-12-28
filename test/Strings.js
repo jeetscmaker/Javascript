@@ -62,8 +62,16 @@ console.log(str.substring(0,5));
 console.log(str.substr(0,6));
 console.log(str.substr(-7));
 
-//The replace() method replaces a specified value with another value in a string:
+//The replace() method replaces a specified value with another value in a string.
 //The replace() method does not change the string it is called on. It returns a new string.
+//By default, the replace() method replaces only the first match and is case sensitive.
+//To replace case insensitive, use a regular expression with an /i flag (insensitive).
+//Note that regular expressions are written without quotes.
+//To replace all matches, use a regular expression with a /g flag (global match).
 
 str = "Please visit Microsoft!";
 console.log(`The replaced string is: ${str.replace("Microsoft", "W3Schools")}`);
+
+str = "Please visit Microsoft and Microsoft!";
+console.log(`The replaced string is: ${str.replace(/MICROSOFT/i, "W3Schools")}`);
+console.log(`The replaced string with all matches is: ${str.replace(/Microsoft/g, "W3Schools")}`);
