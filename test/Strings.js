@@ -87,3 +87,9 @@ console.log(str.concat(" some extra .."));
 //The trim() method is not supported in Internet Explorer 8 or lower.
 var str = "       Hello World!        ";
 console.log("The trimmed str is-- " + str.trim());
+
+//ECMAScript 2017 added two String methods: padStart and padEnd to support padding at the beginning and at the end of a string.
+
+let str = "5";
+str = str.padStart(4,0); // result is 0005
+str = str.padEnd(4,0);   // result is 5000
