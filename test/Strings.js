@@ -102,3 +102,11 @@ str.charAt(0);            // returns H
 //The method returns a UTF-16 code (an integer between 0 and 65535).
 str = "HELLO WORLD";
 str.charCodeAt(0);         // returns 72
+
+//A string can be converted to an array with the split() method.
+var txt = "a,b,c,d,e";   // String
+txt.split(",");          // Split on commas
+txt.split(" ");          // Split on spaces
+txt.split("|");          // Split on pipe
+//If the separator is omitted, the returned array will contain the whole string in index [0].
+//If the separator is "", the returned array will be an array of single characters.
