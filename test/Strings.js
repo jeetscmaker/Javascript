@@ -85,20 +85,20 @@ console.log(str.concat(" some extra .."));
 
 //The trim() method removes whitespace from both sides of a string.
 //The trim() method is not supported in Internet Explorer 8 or lower.
-var str = "       Hello World!        ";
+str = "       Hello World!        ";
 console.log("The trimmed str is-- " + str.trim());
 
 //ECMAScript 2017 added two String methods: padStart and padEnd to support padding at the beginning and at the end of a string.
 
-let str = "5";
+str = "5";
 str = str.padStart(4,0); // result is 0005
 str = str.padEnd(4,0);   // result is 5000
 
 //The charAt() method returns the character at a specified index (position) in a string.
-var str = "HELLO WORLD";
+str = "HELLO WORLD";
 str.charAt(0);            // returns H
 
 //The charCodeAt() method returns the unicode of the character at a specified index in a string:
 //The method returns a UTF-16 code (an integer between 0 and 65535).
-var str = "HELLO WORLD";
+str = "HELLO WORLD";
 str.charCodeAt(0);         // returns 72
