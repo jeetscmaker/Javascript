@@ -75,3 +75,15 @@ console.log(`The replaced string is: ${str.replace("Microsoft", "W3Schools")}`);
 str = "Please visit Microsoft and Microsoft!";
 console.log(`The replaced string is: ${str.replace(/MICROSOFT/i, "W3Schools")}`);
 console.log(`The replaced string with all matches is: ${str.replace(/Microsoft/g, "W3Schools")}`);
+
+//A string is converted to upper case with toUpperCase().
+//A string is converted to upper case with toLowerCase().
+//concat() joins two or more strings and it can be used instead of + operator..
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+console.log(str.concat(" some extra .."));
+
+//The trim() method removes whitespace from both sides of a string.
+//The trim() method is not supported in Internet Explorer 8 or lower.
+var str = "       Hello World!        ";
+console.log("The trimmed str is-- " + str.trim());
