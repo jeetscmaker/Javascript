@@ -61,3 +61,9 @@ console.log("The sliced part is:" + str.slice(-12, -6));
 console.log(str.substring(0,5));
 console.log(str.substr(0,6));
 console.log(str.substr(-7));
+
+//The replace() method replaces a specified value with another value in a string:
+//The replace() method does not change the string it is called on. It returns a new string.
+
+str = "Please visit Microsoft!";
+console.log(`The replaced string is: ${str.replace("Microsoft", "W3Schools")}`);
