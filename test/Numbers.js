@@ -41,4 +41,9 @@ x = 20, y = "ten", z = x/y; // result will be NaN.
 console.log(`The result of 60 - "30" is ${60 - "30"}`); // output 30.
 console.log(`The result of 60 * "30" is ${60 * "30"}`); // output 1800.
 console.log(`The result of 60 / "30" is ${60 / "30"}`); // output 2.
+console.log(`Type of NaN is: ${typeof NaN}`);
 
+//Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+//Division by 0 (zero) also generates Infinity.
+var x =  2 / 0;       // x will be Infinity
+var y = -2 / 0;       // y will be -Infinity 
