@@ -30,3 +30,15 @@ z = y + x; // it gives the result 2010.
 console.log(`The result is ${z}`);
 x = 10, y = 20, z = y + x; // it gives the result 30.
 console.log(`The result is ${z}`);
+x = 10, y = "20", z = y + x; // it gives the result 2010
+console.log(`The result is ${z}`);
+console.log(`The result of 10 + 20 + "30" is ${10 + 20 + "30"}`); // output 3030.
+
+//JavaScript will try to convert strings to numbers in all numeric operations:
+x = 20, y = "10", z = x/y; // result will be 2.
+x = 20, y = "ten", z = x/y; // result will be NaN.
+// Examples of subtraction, multiplication and division.
+console.log(`The result of 60 - "30" is ${60 - "30"}`); // output 30.
+console.log(`The result of 60 * "30" is ${60 * "30"}`); // output 1800.
+console.log(`The result of 60 / "30" is ${60 / "30"}`); // output 2.
+
