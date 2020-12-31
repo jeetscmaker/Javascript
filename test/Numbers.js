@@ -17,3 +17,16 @@ var y = 123e-5;   // 0.00123
 //Integers (numbers without a period or exponent notation) are accurate up to 15 digits.
 var x = 999999999999999;   // x will be 999999999999999
 var y = 9999999999999999;  // y will be 10000000000000000 
+
+//The maximum number of decimals is 17, but floating point arithmetic is not always 100% accurate:
+var x = 0.2 + 0.1;         // x will be 0.30000000000000004 
+//To solve the problem above, it helps to multiply and divide:
+var x = (0.2 * 10 + 0.1 * 10) / 10;       // x will be 0.3 
+
+// Addition in Javascript numbers:
+x = "10";
+y = "20";
+z = y + x; // it gives the result 2010.
+console.log(`The result is ${z}`);
+x = 10, y = 20, z = y + x; // it gives the result 30.
+console.log(`The result is ${z}`);
