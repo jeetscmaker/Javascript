@@ -60,4 +60,15 @@ x.toExponential(6);     // returns 9.656000e+0
 
 //toFixed() returns a string, with the number written with a specified number of decimals.
 //toFixed(2) is perfect for working with money.
+var x = 9.656;
+x.toFixed(0);           // returns 10
+x.toFixed(2);           // returns 9.66
+x.toFixed(4);           // returns 9.6560
+x.toFixed(6);           // returns 9.656000 
 
+//toPrecision() returns a string, with a number written with a specified length:
+var x = 9.656;
+x.toPrecision();        // returns 9.656
+x.toPrecision(2);       // returns 9.7
+x.toPrecision(4);       // returns 9.656
+x.toPrecision(6);       // returns 9.65600 
