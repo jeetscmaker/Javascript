@@ -47,3 +47,17 @@ console.log(`Type of NaN is: ${typeof NaN}`);
 //Division by 0 (zero) also generates Infinity.
 var x =  2 / 0;       // x will be Infinity
 var y = -2 / 0;       // y will be -Infinity 
+
+/* Number methods ----------- */
+
+//The toString() method returns a number as a string.
+//toExponential() returns a string, with a number rounded and written using exponential notation.
+//The parameter is optional. If you don't specify it, JavaScript will not round the number.
+var x = 9.656;
+x.toExponential(2);     // returns 9.66e+0
+x.toExponential(4);     // returns 9.6560e+0
+x.toExponential(6);     // returns 9.656000e+0 
+
+//toFixed() returns a string, with the number written with a specified number of decimals.
+//toFixed(2) is perfect for working with money.
+
