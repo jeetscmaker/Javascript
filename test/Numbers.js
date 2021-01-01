@@ -72,3 +72,47 @@ x.toPrecision();        // returns 9.656
 x.toPrecision(2);       // returns 9.7
 x.toPrecision(4);       // returns 9.656
 x.toPrecision(6);       // returns 9.65600 
+
+//valueOf() returns a number as a number.
+console.log(`The type of "123".valueOf() is : ${typeof "123".valueOf()}`);
+console.log(`The type of 123.valueOf() is : ${typeof (new Number(123)).valueOf()}`);
+
+/*
+Global JavaScript Methods
+JavaScript global methods can be used on all JavaScript data types.
+These are the most relevant methods, when working with numbers:
+Method 	        Description
+Number() 	    Returns a number, converted from its argument.
+parseFloat() 	Parses its argument and returns a floating point number
+parseInt() 	    Parses its argument and returns an integer
+*/
+Number(true);          // returns 1
+Number(false);         // returns 0
+Number("10");          // returns 10
+Number("  10");        // returns 10
+Number("10  ");        // returns 10
+Number(" 10  ");       // returns 10
+Number("10.33");       // returns 10.33
+Number("10,33");       // returns NaN
+Number("10 33");       // returns NaN
+Number("John");        // returns NaN 
+//The Number() method below returns the number of milliseconds since 1.1.1970. 
+Number(new Date("2017-09-30"));    // returns 1506729600000
+// parseInt() -----------
+parseInt("10");         // returns 10
+parseInt("10.33");      // returns 10
+parseInt("10 20 30");   // returns 10
+parseInt("10 years");   // returns 10
+parseInt("years 10");   // returns NaN  
+// parseFloat() ----------
+parseFloat("10");        // returns 10
+parseFloat("10.33");     // returns 10.33
+parseFloat("10 20 30");  // returns 10
+parseFloat("10 years");  // returns 10
+parseFloat("years 10");  // returns NaN 
+
+//MAX_VALUE 	Returns the largest number possible in JavaScript, Number.MAX_VALUE
+//MIN_VALUE 	Returns the smallest number possible in JavaScript, Number.MIN_VALUE
+//POSITIVE_INFINITY 	Represents infinity (returned on overflow), Number.POSITIVE_INFINITY
+//NEGATIVE_INFINITY 	Represents negative infinity (returned on overflow), Number.NEGATIVE_INFINITY
+//NaN 	Represents a "Not-a-Number" value
