@@ -34,3 +34,12 @@ fruits[6] = "Lemon";    // adds a new element (Lemon) to fruits
 //JavaScript does not support arrays with named indexes. In JavaScript, arrays always use numbered indexes and Object uses named index.
 var points = new Array(40, 100, 1, 5, 25, 10); // Bad approach.
 var points = [40, 100, 1, 5, 25, 10];          // Good approach.
+
+// How to identify an array
+Array.isArray(fruits);   // returns true from ES 5 onwards.
+// some old browsers don't support ES5. SO isArray method can be defined as:
+function isArray(x) {
+    return x.constructor.toString().indexOf("Array") > -1;
+  } 
+console.log("points is an array: " + isArray(points));
+console.log(`using instanceof for determining 'fruits' is an array: ${fruits instanceof Array}`);
