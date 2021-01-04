@@ -43,3 +43,7 @@ function isArray(x) {
   } 
 console.log("points is an array: " + isArray(points));
 console.log(`using instanceof for determining 'fruits' is an array: ${fruits instanceof Array}`);
+
+/*--- Array Methods ---*/ 
+//The JavaScript method toString() converts an array to a string of (comma separated) array values.
+console.log(`The stringified form of array 'fruits' is: ${fruits.toString()}`);
