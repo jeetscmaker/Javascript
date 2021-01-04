@@ -47,3 +47,15 @@ console.log(`using instanceof for determining 'fruits' is an array: ${fruits ins
 /*--- Array Methods ---*/ 
 //The JavaScript method toString() converts an array to a string of (comma separated) array values.
 console.log(`The stringified form of array 'fruits' is: ${fruits.toString()}`);
+
+//The join() method also joins all array elements into a string.
+//It behaves just like toString(), but in addition you can specify the separator.
+console.log(`The joined form of array 'fruits' is: ${fruits.join('-')}`);
+
+//The pop() method removes the last element from an array, returns the value that was "popped out".
+var p = fruits.pop();
+console.log(`Popped from fruits: ${p}`);
+
+//The push() method adds a new element to an array (at the end), returns the new array length.
+var len = fruits.push('Grapes');
+console.log(`Pushed Grapes to fruits, new length is: ${len}`);
