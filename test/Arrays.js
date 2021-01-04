@@ -59,3 +59,13 @@ console.log(`Popped from fruits: ${p}`);
 //The push() method adds a new element to an array (at the end), returns the new array length.
 var len = fruits.push('Grapes');
 console.log(`Pushed Grapes to fruits, new length is: ${len}`);
+
+//The shift() method removes the first array element and "shifts" all other elements to a lower index.
+// and it returns the string that was "shifted out".
+var removed = fruits.shift();
+console.log(`removed from fruits by shifting is: ${removed}`);
+
+//The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements,
+// and returns the new array length.
+var added = fruits.unshift('Blueberry');
+console.log(`added to fruits by unshifting, length is: ${added}`);
