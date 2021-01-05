@@ -89,3 +89,19 @@ fruits.splice(2, 0, "Lemon", "Kiwi");
 console.log(fruits);
 fruits.splice(0, 1);        // Removes the first element of fruits 
 console.log(fruits);
+
+//The concat() method creates a new array by merging (concatenating) existing arrays.
+//It does not change the existing arrays & always returns a new array & it can take any number of array arguments.
+var myGirls = ["Cecilie", "Lone"];
+var myBoys = ["Emil", "Tobias", "Linus"];
+var myChildren = myGirls.concat(myBoys);   // Concatenates (joins) myGirls and myBoys
+console.log(myChildren);
+//var myChildren = arr1.concat(arr2, arr3, arr4, arr5,...);
+
+//The slice() method can take two arguments like slice(1, 3).
+// It then selects elements from the start argument, and up to (but not including) the end argument.
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1, 3); // citrus will be ["Orange", "Lemon"].
+//If the end argument is omitted, like in the first examples, the slice() method slices out the rest of the array.
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(2); // citrus will be ["Lemon", "Apple", "Mango"]
