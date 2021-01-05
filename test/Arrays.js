@@ -4,9 +4,9 @@ cars.forEach(car => console.log(car));
 // another way of writing above code if it has multiple statements.
 var i = 1;
 cars.forEach(car => {
-    car = i + "." + car;
-    console.log(car);
-    i++;
+  car = i + "." + car;
+  console.log(car);
+  i++;
 });
 var a = new Array("Saab", "Volvo", "BMW");
 //Note: Array indexes start with 0.
@@ -39,12 +39,12 @@ var points = [40, 100, 1, 5, 25, 10];          // Good approach.
 Array.isArray(fruits);   // returns true from ES 5 onwards.
 // some old browsers don't support ES5. SO isArray method can be defined as:
 function isArray(x) {
-    return x.constructor.toString().indexOf("Array") > -1;
-  } 
+  return x.constructor.toString().indexOf("Array") > -1;
+}
 console.log("points is an array: " + isArray(points));
 console.log(`using instanceof for determining 'fruits' is an array: ${fruits instanceof Array}`);
 
-/*--- Array Methods ---*/ 
+/*--- Array Methods ---*/
 //The JavaScript method toString() converts an array to a string of (comma separated) array values.
 console.log(`The stringified form of array 'fruits' is: ${fruits.toString()}`);
 
@@ -69,3 +69,23 @@ console.log(`removed from fruits by shifting is: ${removed}`);
 // and returns the new array length.
 var added = fruits.unshift('Blueberry');
 console.log(`added to fruits by unshifting, length is: ${added}`);
+
+//Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete.
+//Using delete may leave undefined holes in the array. Use pop() or shift() instead.
+delete fruits[0]; // It will create a 'hole' at 0th index. hole means undefined.
+console.log(fruits);
+fruits[0] = "blueberry"; // assingning a new item to 0th index.
+console.log(fruits);
+
+/*The splice() method can be used to add new items to an array.
+The first parameter (2) defines the position where new elements should be added (spliced in).
+The second parameter (0) defines how many elements should be removed.
+The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+The splice() method returns an array with the deleted items.
+With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array.
+*/
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+console.log(fruits);
+fruits.splice(0, 1);        // Removes the first element of fruits 
+console.log(fruits);
