@@ -105,3 +105,13 @@ var citrus = fruits.slice(1, 3); // citrus will be ["Orange", "Lemon"].
 //If the end argument is omitted, like in the first examples, the slice() method slices out the rest of the array.
 var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 var citrus = fruits.slice(2); // citrus will be ["Lemon", "Apple", "Mango"]
+
+// sort() method sorts an array.
+console.log("The sorted fruits are: " + fruits.sort());
+// sorting in reverse order.
+console.log("The sorted fruits in reverse are: " + fruits.sort().reverse());
+
+var nums = [54,3, 21, 34, 6];
+console.log("Nums in sorted order wrong: " + nums.sort()); // produces wrong result.
+// sorting nums with a compare function
+console.log(`Numbers in sorted order: ${points.sort(function(a, b){return a - b})}`);
