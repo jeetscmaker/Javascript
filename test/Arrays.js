@@ -115,3 +115,16 @@ var nums = [54,3, 21, 34, 6];
 console.log("Nums in sorted order wrong: " + nums.sort()); // produces wrong result.
 // sorting nums with a compare function
 console.log(`Numbers in sorted order: ${points.sort(function(a, b){return a - b})}`);
+
+//--------------The Fisher Yates Method===============
+/*The above example, array.sort(), is not accurate, it will favor some numbers over the others.
+The most popular correct method, is called the Fisher Yates shuffle, and was introduced in data science as early as 1938!
+In JavaScript the method can be translated to this:*/
+var points = [40, 100, 1, 5, 25, 10];
+
+for (i = points.length -1; i > 0; i--) {
+  j = Math.floor(Math.random() * i)
+  k = points[i]
+  points[i] = points[j]
+  points[j] = k
+} 
