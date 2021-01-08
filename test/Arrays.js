@@ -111,10 +111,10 @@ console.log("The sorted fruits are: " + fruits.sort());
 // sorting in reverse order.
 console.log("The sorted fruits in reverse are: " + fruits.sort().reverse());
 
-var nums = [54,3, 21, 34, 6];
+var nums = [54, 3, 21, 34, 6];
 console.log("Nums in sorted order wrong: " + nums.sort()); // produces wrong result.
 // sorting nums with a compare function
-console.log(`Numbers in sorted order: ${points.sort(function(a, b){return a - b})}`);
+console.log(`Numbers in sorted order: ${points.sort(function (a, b) { return a - b })}`);
 
 //--------------The Fisher Yates Method===============
 /*The above example, array.sort(), is not accurate, it will favor some numbers over the others.
@@ -122,9 +122,68 @@ The most popular correct method, is called the Fisher Yates shuffle, and was int
 In JavaScript the method can be translated to this:*/
 var points = [40, 100, 1, 5, 25, 10];
 
-for (i = points.length -1; i > 0; i--) {
+for (i = points.length - 1; i > 0; i--) {
   j = Math.floor(Math.random() * i)
   k = points[i]
   points[i] = points[j]
   points[j] = k
-} 
+}
+
+// Finding maximum in an array. Math.max.apply(null, [1, 2, 3]) is equivalent to Math.max(1, 2, 3).
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+
+// Finding minimum in an array.Math.min.apply(null, [1, 2, 3]) is equivalent to Math.min(1, 2, 3).
+function myArrayMin(arr) {
+  return Math.maminx.apply(null, arr);
+}
+
+//The fastest solution is to use a "home made" method.
+// Max function
+function myArrayMax(arr) {
+  var len = arr.length;
+  var max = -Infinity;
+  while (len--) {
+    if (arr[len] > max) {
+      max = arr[len];
+    }
+  }
+  return max;
+}
+// Min function.
+function myArrayMin(arr) {
+  var len = arr.length;
+  var min = Infinity;
+  while (len--) {
+    if (arr[len] < min) {
+      min = arr[len];
+    }
+  }
+  return min;
+}
+
+//Sorting Object Arrays
+var cars = [
+  { type: "Volvo", year: 2016 },
+  { type: "Saab", year: 2001 },
+  { type: "BMW", year: 2010 }
+];
+cars.sort(function (a, b) { return a.year - b.year });
+console.log("---sorting by year---");
+cars.forEach(car => {
+  console.log(car.type + " " + car.year)
+});
+
+// Comparing with string properties.
+console.log("---sorting by name---");
+cars.sort(function(a, b){
+  var x = a.type.toLowerCase();
+  var y = b.type.toLowerCase();
+  if (x < y) {return -1;}
+  if (x > y) {return 1;}
+  return 0;
+}); 
+cars.forEach(car => {
+  console.log(car.type + " " + car.year)
+});
