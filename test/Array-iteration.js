@@ -27,3 +27,16 @@ var over18 = numbers.filter(myFunctionFilter).forEach(e => console.log(e));
 function myFunctionFilter(value, index, array) {
   return value > 18;
 } 
+
+/*The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+The reduce() method works from left-to-right in the array. See also reduceRight().
+The reduce() method does not reduce the original array.
+This example finds the sum of all numbers in an array:
+*/
+var numbers1 = [45, 4, 9, 16, 25];
+var sum = numbers1.reduce(myFunctionReduce);
+console.log("The reduced sum is : " + sum);
+
+function myFunctionReduce(total, value, index, array) {
+  return total + value;
+}
