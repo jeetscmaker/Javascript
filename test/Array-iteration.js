@@ -40,3 +40,10 @@ console.log("The reduced sum is : " + sum);
 function myFunctionReduce(total, value, index, array) {
   return total + value;
 }
+//The reduce() method can accept an initial value:
+var sum = numbers1.reduce(myFunctionReduce2, 100);
+console.log("The reduced sum with initial value 100 is : " + sum);
+function myFunctionReduce2(total, value) {
+  return total + value;
+} 
+console.table(numbers1);
