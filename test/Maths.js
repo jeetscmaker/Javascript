@@ -68,3 +68,10 @@ For this, JavaScript has a Boolean data type. It can only take the values true o
 "false"
 
 7 + 1 + 3.14
+
+//Everything Without a "Value" is False
+//The Boolean value of 0 (zero) and -0(-zero) is false
+//The Boolean value of "" (empty string) is false.
+//The Boolean value of undefined is false.
+//The Boolean value of null is false.
+//The Boolean value of NaN is false.
