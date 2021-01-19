@@ -11,6 +11,10 @@ class Car {
         this.name = name;
         this.year = year;
     }
+    age() {
+        let date = new Date();
+        return date.getFullYear() - this.year;
+    }
 }
 
 // A Javascript class is NOT an object. It is a template for JS objects.
@@ -34,8 +38,11 @@ If you do not define a constructor method, JavaScript will add an empty construc
 
 // --------- Class Methods---------
 class ClassName {
-    constructor() {  }
+    constructor() { }
     method_1() { }
-    method_2() {  }
-    method_3() {  }
-  }
+    method_2() { }
+    method_3() { }
+}
+//---------------------------------
+let myCar = new Car("Ford", 2014);
+console.log("My car is " + myCar.age() + " years old.");
