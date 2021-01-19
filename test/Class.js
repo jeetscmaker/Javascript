@@ -31,3 +31,11 @@ The constructor method is a special method:
 
 If you do not define a constructor method, JavaScript will add an empty constructor method. 
 */
+
+// --------- Class Methods---------
+class ClassName {
+    constructor() {  }
+    method_1() { }
+    method_2() {  }
+    method_3() {  }
+  }
