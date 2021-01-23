@@ -60,9 +60,9 @@ function Person(first, last, age, eyecolor) {
     this.lastName = last;
     this.age = age;
     this.eyeColor = eyecolor;
-  }
-  
-  Person.prototype.nationality = "English";
+}
+
+Person.prototype.nationality = "English";
 
 //The JavaScript prototype property also allows you to add new methods to objects constructors:
 function Person(first, last, age, eyecolor) {
@@ -70,11 +70,11 @@ function Person(first, last, age, eyecolor) {
     this.lastName = last;
     this.age = age;
     this.eyeColor = eyecolor;
-  }
-  
-  Person.prototype.name = function() {
+}
+
+Person.prototype.name = function () {
     return this.firstName + " " + this.lastName;
-  };
+};
 
 // --------- ES5 New Object Methods ----------
 // Adding or changing an object property
@@ -112,3 +112,31 @@ Object.freeze(object)
 
 // Returns true if object is frozen
 Object.isFrozen(object)
+
+var person = {
+    firstName: "John",
+    lastName: "Doe",
+    language: "EN"
+};
+
+// Change a property
+Object.defineProperty(person, "language", { value: "NO" }); 
+
+//This example makes language read-only:
+Object.defineProperty(person, "language", {writable:false});
+
+//This example makes language not enumerable:
+Object.defineProperty(person, "language", {enumerable:false});
+
+Object.getOwnPropertyNames(person);  // Returns an array of properties
+Object.keys(person);  // Returns an array of enumerable properties
+Object.defineProperty(person, "year", {value:"2008"}); // adding a property
+
+//The Object.defineProperty() method can also be used to add Getters and Setters:
+//Create an object
+var person = {firstName:"John", lastName:"Doe"};
+
+// Define a getter
+Object.defineProperty(person, "fullName", {
+  get : function () {return this.firstName + " " + this.lastName;}
+});
