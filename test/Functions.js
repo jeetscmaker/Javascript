@@ -27,16 +27,38 @@ With call(), an object can use a method belonging to another object.
 This example calls the fullName method of person, using it on person1:
 */
 var person = {
-    fullName: function() {
-      return this.firstName + " " + this.lastName;
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
     }
-  }
-  var person1 = {
-    firstName:"John",
+}
+var person1 = {
+    firstName: "John",
     lastName: "Doe"
-  }
-  var person2 = {
-    firstName:"Mary",
+}
+var person2 = {
+    firstName: "Mary",
     lastName: "Doe"
-  }
-  person.fullName.call(person1);  // Will return "John Doe" 
+}
+person.fullName.call(person1);  // Will return "John Doe" 
+
+//The call() method can accept arguments:
+var person = {
+    fullName: function (city, country) {
+        return this.firstName + " " + this.lastName + "," + city + "," + country;
+    }
+}
+var person1 = {
+    firstName: "John",
+    lastName: "Doe"
+}
+person.fullName.call(person1, "Oslo", "Norway");
+person.fullName.apply(person2);  // Will return "Mary Doe"
+
+/*
+The Difference Between call() and apply() is:
+The call() method takes arguments separately.
+The apply() method takes arguments as an array.
+The apply() method is very handy if you want to use an array instead of an argument list.
+*/
+
+
