@@ -18,3 +18,25 @@ console.log(`Type of sum function is: ${typeof sum}`);
 console.log(`Type of subtract function is: ${typeof subtract}`);
 console.log(`Output of sum function with a=15, b=10 is: ${sum(15, 10)}`);
 console.log(`Output of subtract function with a=15, b=10 is: ${subtract(15, 10)}`);
+
+/*
+The JavaScript call() Method:
+The call() method is a predefined JavaScript method.
+It can be used to invoke (call) a method with an owner object as an argument (parameter).
+With call(), an object can use a method belonging to another object.
+This example calls the fullName method of person, using it on person1:
+*/
+var person = {
+    fullName: function() {
+      return this.firstName + " " + this.lastName;
+    }
+  }
+  var person1 = {
+    firstName:"John",
+    lastName: "Doe"
+  }
+  var person2 = {
+    firstName:"Mary",
+    lastName: "Doe"
+  }
+  person.fullName.call(person1);  // Will return "John Doe" 
