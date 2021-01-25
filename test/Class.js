@@ -46,3 +46,12 @@ class ClassName {
 //---------------------------------
 let myCar = new Car("Ford", 2014);
 console.log("My car is " + myCar.age() + " years old.");
+
+class Student{
+    constructor(id){
+        this.roll = id;
+    }
+}
+
+let s = new Student(15);
+console.log(`The roll number is ${s.roll}`);
