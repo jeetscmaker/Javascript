@@ -63,7 +63,7 @@ To create a class inheritance, use the extends keyword.
 A class created with a class inheritance inherits all the methods from another class.
 Create a class named "Model" which will inherit the methods from the "Car" class:
 */
-class Car {
+class CarW {
     constructor(brand) {
         this.carname = brand;
     }
@@ -71,7 +71,7 @@ class Car {
         return 'I have a ' + this.carname;
     }
 }
-class Model extends Car {
+class Model extends CarW {
     constructor(brand, mod) {
         super(brand);
         this.model = mod;
@@ -82,4 +82,4 @@ class Model extends Car {
 }
 
 let myCar = new Model("Ford", "Mustang");
-document.getElementById("demo").innerHTML = myCar.show();
+console.table(myCar);
