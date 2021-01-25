@@ -81,5 +81,102 @@ class Model extends CarW {
     }
 }
 
-let myCar = new Model("Ford", "Mustang");
-console.table(myCar);
+let heyCar = new Model("Ford", "Mustang");
+console.table(heyCar);
+
+/*
+Inheritance is useful for code reusability: reuse properties and methods of an existing class when you create a new class.
+
+Getters and Setters
+--------------------
+Classes also allows you to use getters and setters.
+It can be smart to use getters and setters for your properties, especially if you want to do something 
+special with the value before returning them, or before you set them.
+
+To add getters and setters in the class, use the get and set keywords.
+Example
+
+Create a getter and a setter for the "carname" property:
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  get cnam() {
+    return this.carname;
+  }
+  set cnam(x) {
+    this.carname = x;
+  }
+}
+
+let myCar = new Car("Ford");
+
+let x = myCar.cnam;
+
+Note: even if the getter is a method, you do not use parentheses when you want to get the property value.
+
+The name of the getter/setter method cannot be the same as the name of the property, in this case carname.
+
+Many programmers use an underscore character _ before the property name to separate the getter/setter from the actual property:
+Example
+
+You can use the underscore character to separate the getter/setter from the actual property:
+class Car {
+  constructor(brand) {
+    this._carname = brand;
+  }
+  get carname() {
+    return this._carname;
+  }
+  set carname(x) {
+    this._carname = x;
+  }
+}
+
+let myCar = new Car("Ford");
+
+document.getElementById("demo").innerHTML = myCar.carname;
+
+To use a setter, use the same syntax as when you set a property value, without parentheses:
+Example
+
+Use a setter to change the carname to "Volvo":
+class Car {
+  constructor(brand) {
+    this._carname = brand;
+  }
+  get carname() {
+    return this._carname;
+  }
+  set carname(x) {
+    this._carname = x;
+  }
+}
+
+let myCar = new Car("Ford");
+myCar.carname = "Volvo";
+x = myCar.carname;
+
+Hoisting
+
+Unlike functions, and other JavaScript declarations, class declarations are not hoisted.
+
+That means that you must declare a class before you can use it:
+Example
+//You cannot use the class yet.
+//myCar = new Car("Ford")
+//This would raise an error.
+
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+}
+
+//Now you can use the class:
+let myCar = new Car("Ford")
+
+Note: For other declarations, like functions, you will NOT get an error when you try to use it before 
+it is declared, because the default behavior of JavaScript declarations are hoisting 
+(moving the declaration to the top).
+*/
