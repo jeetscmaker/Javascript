@@ -1,5 +1,6 @@
 /*
 A callback is a function passed as an argument to another function.
+When you pass a function as an argument, remember not to use parenthesis.
 Using a callback, you could call the calculator function (myCalculator) with a callback,
 and let the calculator function run the callback after the calculation is finished:
 */
