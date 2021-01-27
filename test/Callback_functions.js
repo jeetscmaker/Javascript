@@ -14,3 +14,15 @@ function myCalculator(num1, num2, myCallback) {
 }
 
 myCalculator(5, 5, myDisplayer);
+
+// Javascript function to show a digital clock with hours, minutes, seconds.
+setInterval(myFunction, 1000);
+
+function myFunction() {
+  let d = new Date();
+  time =
+  d.getHours() + ":" +
+  d.getMinutes() + ":" +
+  d.getSeconds();
+  console.log(time);
+}
