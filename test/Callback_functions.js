@@ -5,12 +5,12 @@ Using a callback, you could call the calculator function (myCalculator) with a c
 and let the calculator function run the callback after the calculation is finished:
 */
 function myDisplayer(sum) {
-    console.log(`The sum is : ${sum}`);
+  console.log(`The sum is : ${sum}`);
 }
 
 function myCalculator(num1, num2, myCallback) {
-    let sum = num1 + num2;
-    myCallback(sum);
+  let sum = num1 + num2;
+  myCallback(sum);
 }
 
 myCalculator(5, 5, myDisplayer);
@@ -21,9 +21,9 @@ setInterval(myFunction, 1000);
 function myFunction() {
   let d = new Date();
   time =
-  d.getHours() + ":" +
-  d.getMinutes() + ":" +
-  d.getSeconds();
+    d.getHours() + ":" +
+    d.getMinutes() + ":" +
+    d.getSeconds();
   console.log(time);
 }
 
@@ -36,15 +36,44 @@ function myFunction() {
 
 // JavaScript Promise Object
 // A JavaScript Promise object contains both the producing code and calls to the consuming code:
-let myPromise = new Promise(function(myResolve, myReject) {
+let myPromise = new Promise(function (myResolve, myReject) {
   // "Producing Code" (May take some time)
-  
-    myResolve(); // when successful
-    myReject();  // when error
-  });
-  
-  // "Consuming Code" (Must wait for a fulfilled Promise)
-  myPromise.then(
-    function(value) { /* code if successful */ },
-    function(error) { /* code if some error */ }
-  );
+
+  myResolve(); // when successful
+  myReject();  // when error
+});
+
+// "Consuming Code" (Must wait for a fulfilled Promise)
+myPromise.then(
+  function (value) { /* code if successful */ },
+  function (error) { /* code if some error */ }
+);
+
+/*
+Promise Object Properties
+A JavaScript Promise object can be:
+
+Pending
+Fulfilled
+Rejected
+The Promise object supports two properties: state and result.
+
+While a Promise object is "pending" (working), the result is undefined.
+
+When a Promise object is "fulfilled", the result is a value.
+
+When a Promise object is "rejected", the result is an error object.
+
+myPromise.state	myPromise.result
+"pending"	undefined
+"fulfilled"	a result value
+"rejected"	an error object
+You cannot access the Promise properties state and result.
+
+You must use a Promise method to handle promises.
+Here is how to use a Promise:
+*/
+myPromise.then(
+  function(value) { /* code if successful */ },
+  function(error) { /* code if some error */ }
+);
