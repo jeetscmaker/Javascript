@@ -100,3 +100,26 @@ myPromise.then(
   function(value) {myDisplayer(value);},
   function(error) {myDisplayer(error);}
 );
+
+// --------- ASYNC in Javascript ------------
+//The keyword async before a function makes the function return a promise:
+async function myFunction() {
+  return "Hello";
+} // this is same as below code:
+
+async function myFunction() {
+  return Promise.resolve("Hello");
+}
+
+//The keyword await before a function makes the function wait for a promise:
+//The await keyword can only be used inside an async function.
+let value = await promise;
+
+async function myDisplay() {
+  let myPromise = new Promise(function(myResolve, myReject) {
+    setTimeout(function() { myResolve("I love You !!"); }, 3000);
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
