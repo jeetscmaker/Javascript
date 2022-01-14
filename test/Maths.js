@@ -75,3 +75,6 @@ For this, JavaScript has a Boolean data type. It can only take the values true o
 //The Boolean value of undefined is false.
 //The Boolean value of null is false.
 //The Boolean value of NaN is false.
+
+// Math.trunc(x) returns the integer part of x:
+Math.trunc(4.9); // returns 4.
