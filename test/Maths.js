@@ -78,3 +78,8 @@ For this, JavaScript has a Boolean data type. It can only take the values true o
 
 // Math.trunc(x) returns the integer part of x:
 Math.trunc(4.9); // returns 4.
+
+// Math.sign(x) returns if x is negative, null or positive:
+Math.sign(-4.5); // returns -1
+Math.sign(9.5); // returns +1
+Math.sign(0); // returns 0
