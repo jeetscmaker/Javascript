@@ -83,3 +83,9 @@ Math.trunc(4.9); // returns 4.
 Math.sign(-4.5); // returns -1
 Math.sign(9.5); // returns +1
 Math.sign(0); // returns 0
+
+// Math.pow(x, y) returns the value of x to the power of y:
+Math.pow(8,2); // returns 64
+
+// Math.random() returns a random number between 0 (inclusive), and 1 (exclusive):
+Math.random(); // returned 0.6183911007580886, it can vary every time.
