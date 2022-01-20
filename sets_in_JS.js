@@ -34,3 +34,20 @@ values()  ---	Returns an iterator with all the values in a Set
 Property  ---	Description
 size	  ---   Returns the number of elements in a Set
 */
+
+// The forEach() method invokes (calls) a function for each Set element:
+const letters = new Set(["a","b","c"]);
+
+// List all Elements
+let text = "";
+letters.forEach (function(value) {
+  text += value;
+})
+
+//The values() method returns a new iterator object containing all the values in a Set:
+letters.values()   // Returns [object Set Iterator] 
+// List all Elements
+let text = "";
+for (const x of letters.values()) {
+  text += x;
+}
